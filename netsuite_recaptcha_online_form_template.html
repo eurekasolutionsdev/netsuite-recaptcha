@@ -1,124 +1,124 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <title>Registration Form</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-      <style>
-         body {
-            padding-top: 60px;
-         }
-         input[type="text"] {
-            width: 90%;
-         }
-         select {
-            width: 90%;
-         }
-         option {
-		    font-size: 14px;
-		    font-weight: normal;
-		    line-height: 20px;
-		 }
-      </style>
-   </head>
-   <body>
-      <div class="navbar navbar-inverse navbar-fixed-top">
-         <div class="navbar-inner">
-            <div class="container">
-               <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="brand" href="http://benjsicam.me/blog/how-to-use-google-recaptcha-on-netsuite-forms-tutorial">NetSuite reCaptcha</a>
-               <div class="nav-collapse collapse">
-                  <ul class="nav">
-                     <li class="active">
-                        <a href="http://benjsicam.me">Home</a>
-                     </li>
-                     <li>
-                     </li>
-                     <li>
-                        <a href="http://benjsicam.me/contact-me/">Contact</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="container">
-		<div class="page-header">
-		   <h3>Registration Form<br><small>Please complete the form below.</small></h3>
+	<head>
+		<meta charset="utf-8">
+		<title>Registration Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<style>
+			#main_section {
+				padding-top: 60px;
+			}
+			input[type="text"], select {
+				width: 90%;
+			}
+			option {
+				font-size: 14px;
+				font-weight: normal;
+				line-height: 20px;
+			}
+			@media (min-width: 960px) {
+				#captcha_section {
+					margin-left: 55px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="http://benjsicam.me/blog/how-to-use-google-recaptcha-on-netsuite-forms-tutorial">NetSuite reCaptcha</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active">
+								<a href="http://benjsicam.me">Home</a>
+							</li>
+							<li>
+								<a href="http://benjsicam.me/contact-me/">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-        <NLFORM>
-            <fieldset class="row span11">
-               <div class="span5">
-                  <div class="control-group">
-                     <label class="control-label">*First Name</label>
-                     <div class="controls">
-                        <NLFIRSTNAME>
-                     </div>
-                  </div>
-                  <div class="control-group">
-                     <label class="control-label">*Last Name</label>
-                     <div class="controls">
-                        <NLLASTNAME>
-                     </div>
-                  </div>
-                  <div class="control-group">
-                     <label class="control-label">*Company Name</label>
-                     <div class="controls">
-                        <NLCOMPANYNAME>
-                     </div>
-                  </div>
-                  <div class="control-group">
-                     <label class="control-label">*Email</label>
-                     <div class="controls">
-                        <NLEMAIL>
-                     </div>
-                  </div>
-               </div>
-               <div class="span5">
-                  <div class="control-group">
-                     <label class="control-label">Street Address</label>
-                     <div class="controls">
-                        <NLADDRESS1>
-                     </div>
-                  </div>
-                  <div class="control-group">
-                     <label class="control-label">City</label>
-                     <div class="controls">
-                        <NLCITY>
-                     </div>
-                  </div>
-                  <div class="control-group">
-                     <label class="control-label">State</label>
-                     <div class="controls">
-                        <NLSTATE>
-                     </div>
-                  </div>
-                  <div class="control-group">
-                     <label class="control-label">Zip</label>
-                     <div class="controls">
-                        <NLZIPCODE>
-                     </div>
-                  </div>
-               </div>
-            </fieldset>
-            <fieldset class="row span11" style="margin-left:55px;">
-               <script type="text/javascript" src="//www.google.com/recaptcha/api/challenge?k=6Lf1-OASAAAAAJlNTtZENc70GhUiV6sUMpqX4BTR"></script>
-               <noscript>
-                  <iframe src="//www.google.com/recaptcha/api/noscript?k=6Lf1-OASAAAAAJlNTtZENc70GhUiV6sUMpqX4BTR" height="300" width="500"></iframe><br/>
-                  <textarea name="recaptcha_challenge_field" rows="3" cols="40">
-                  </textarea>
-                  <input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
-               </noscript>
-               <input id="submitorder" type="submit" class="btn btn-primary" style="margin-top: 20px;" value="Submit" />
-            </fieldset>
-         </form>
-      </div>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-   </body>
+		<div id="main_section" class="container">
+			<div class="page-header">
+				<h3>Registration Form<br/><small>Please complete the form below.</small></h3>
+			</div>
+			<NLFORM>
+			<fieldset class="row span11">
+				<div class="span5">
+					<div class="control-group">
+						<label class="control-label">*First Name</label>
+						<div class="controls">
+							<NLFIRSTNAME>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">*Last Name</label>
+						<div class="controls">
+							<NLLASTNAME>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">*Company Name</label>
+						<div class="controls">
+							<NLCOMPANYNAME>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">*Email</label>
+						<div class="controls">
+							<NLEMAIL>
+						</div>
+					</div>
+				</div>
+				<div class="span5">
+					<div class="control-group">
+						<label class="control-label">Street Address</label>
+						<div class="controls">
+							<NLADDRESS1>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">City</label>
+						<div class="controls">
+							<NLCITY>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">State</label>
+						<div class="controls">
+							<NLSTATE>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Zip</label>
+						<div class="controls">
+							<NLZIPCODE>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset id="captcha_section" class="row span11">
+				<script type="text/javascript" src="//www.google.com/recaptcha/api/challenge?k=6Lf1-OASAAAAAJlNTtZENc70GhUiV6sUMpqX4BTR"></script>
+				<noscript>
+					<iframe src="//www.google.com/recaptcha/api/noscript?k=6Lf1-OASAAAAAJlNTtZENc70GhUiV6sUMpqX4BTR" height="300" width="500"></iframe><br/>
+					<textarea name="recaptcha_challenge_field" rows="3" cols="40">
+					</textarea>
+					<input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+				</noscript>
+				<input id="submitorder" type="submit" class="btn btn-primary" style="margin-top: 20px;" value="Submit" />
+			</fieldset>
+			</form>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+	</body>
 </html>
